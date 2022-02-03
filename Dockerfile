@@ -3,12 +3,12 @@ FROM rmonti/prspipe:0.0.1
 SHELL ["/bin/bash","-c"]
 
 # Download plink2 non-avx version
-RUN wget https://s3.amazonaws.com/plink2-assets/plink2_linux_x86_64_20220121.zip \
-&&  unzip plink2_linux_x86_64_20220121.zip && mv plink2 /usr/local/bin/plink2_x86_64 && rm plink2_linux_x86_64_20220121.zip
+RUN wget https://s3.amazonaws.com/plink2-assets/plink2_linux_x86_64_20220129.zip \
+&&  unzip plink2_linux_x86_64_20220129.zip && mv plink2 /usr/local/bin/plink2_x86_64 && rm plink2_linux_x86_64_20220129.zip
 
 # Download plink 2 avx version
-RUN /usr/bin/wget https://s3.amazonaws.com/plink2-assets/plink2_linux_avx2_20220121.zip \
-&&  unzip plink2_linux_avx2_20220121.zip && mv plink2 /usr/local/bin/ && rm plink2_linux_avx2_20220121.zip
+RUN /usr/bin/wget https://s3.amazonaws.com/plink2-assets/plink2_linux_avx2_20220129.zip \
+&&  unzip plink2_linux_avx2_20220129.zip && mv plink2 /usr/local/bin/ && rm plink2_linux_avx2_20220129.zip
 
 # Download plink1 
 RUN wget http://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20201019.zip \
